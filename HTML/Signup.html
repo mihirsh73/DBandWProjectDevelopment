@@ -1,0 +1,139 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        body
+        {
+            background-image: url(Bench.jpg);   
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow: scroll;
+        }
+        .StyleNavBar
+        {
+            text-align: center;
+            width: auto;
+            overflow: hidden;
+            background-color:darkblue;
+            opacity: 0.8;
+            padding: 14px 16px;
+            font-size: 25px;
+            margin: 10px;
+        }
+        .onhover a:hover
+        {
+                background-color: blue;
+                opacity: 1;
+        }
+        .imgstyle
+        {
+            width: 20%;
+            margin: 10px;
+            border-width: 50px;
+            opacity: 0.8;
+        }
+        .styleheading
+        {
+            text-align: center;
+            Color:white;
+            background-color:darkblue;
+            opacity: 0.8;
+            margin: 10px;
+            background-size: 50% auto;
+        }
+        .formstyle
+        {
+            background-color:white;
+            margin-top: 10%;
+            margin-left: 30%;
+            margin-right: 30%;
+            margin-bottom: 20%;
+            text-align: center;
+            opacity: 0.6;
+        }
+        .buttonstyle
+        {
+            color: white;
+            padding: 10px 1px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.8;
+        }
+        .inputstyle input[type=text], input[type=password] 
+        {
+            width: 100%;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        .inputstyling input[type=text]:focus, input[type=password]:focus
+        {
+            background-color: #ddd;
+            outline: none;
+        }
+        .buttonOnHover button:hover 
+        {
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgstyle">
+        <div class="bgcolor">
+            <img name="logo" id="logo" src="JIITLOGO.png" height="auto" width="auto">
+         </div>
+    </div>
+    <div class="StyleNavBar" id="NavBar">
+        <div class="onhover">
+            <a href="HomePage.html" name="Home" id="Home" style="color:white;">JIIT</a>
+            <a href="Signup.html" name="Admission" id="Admission" style="color:white;">Admission</a>
+            <a href="www.jiit.ac.in" name="KnowJIIT" id="KnowJIIT" style="color:white;">Know JIIT</a>
+            <a href=" " name="ContactUs" id="ContactUs" style="color:white;">Contact Us</a>
+        </div>
+    </div>
+    <div class="styleheading">
+        <h1>JIIT being just few steps ahead</h1>
+    </div>
+    <div class="formstyle">
+        <div class="inputstyling">
+            <div class="inputstyle">
+                <form action=" " method=" ">
+                <label for="MobNum" style="color:black"><b>Mobile</b></label>
+                <br>
+                <input type="number" name="MobNum" id="MobNum" placeholder="Enter Mobile Number" required>
+                <br>
+                <p id="SendOTOPMessage"></p>
+                <label for="OTP" style="color:black">OTP</label>
+                <br>
+                <input type="number" name="OTP" id="OTP" placeholder="Enter 4-digit OTP" required>
+                <br>
+            </div>
+        </div>
+                <div class="buttonstyle">
+                    <div class="buttonOnHover">
+                        <button type="button" onclick="Send_OTP()">Send OTP</button>
+                        <button type="submit" onclick="Evaluate_OTP()">Submit</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+    <script>
+        function Send_OTP()
+        {
+            if(document.getElementById("MobNum")="")
+            {
+                document.getElementById("MobNum").style.color = "red";
+            }
+            document.getElementById("SendOTPMessage").innerHTML="OTP has been send";
+        }
+    </script>
+</body>
+</html>
